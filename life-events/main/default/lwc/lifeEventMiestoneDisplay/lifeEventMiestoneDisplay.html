@@ -1,0 +1,52 @@
+<template>
+    <lightning-card title="Life Events Timeline" icon-name="utility:event">
+        <template if:true={isLoading}>
+            <div class="spinner-container">
+                <lightning-spinner size="small" alternative-text="Loading life events"></lightning-spinner>
+            </div>
+        </template>
+
+        <template if:true={hasLifeEvents}>
+            <ol class="timeline">
+                <template for:each={lifeEvents} for:item="event">
+                    <li key={event.id} class="timeline-item">
+                        <div class="timeline-icon">
+                            <lightning-icon icon-name={event.iconName} alternative-text={event.type} size="small"></lightning-icon>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-content">
+                            <div class="event-header">
+                                <span class="event-date">{event.formattedDate}</span>
+                                <span class="event-type">{event.type}</span>
+                            </div>
+                            <template if:true={event.description}>
+                                <div class="event-detail">{event.description}</div>
+                            </template>
+                            <template if:true={event.location}>
+                                <div class="event-detail location">
+                                    <lightning-icon class="location-icon" icon-name="utility:location" alternative-text="Location" size="x-small"></lightning-icon>
+                                    <span>{event.location}</span>
+                                </div>
+                            </template>
+                        </div>
+                    </li>
+                </template>
+            </ol>
+        </template>
+
+        <template if:true={isEmptyState}>
+            <div class="empty-state">
+                <lightning-icon icon-name="utility:info" alternative-text="No life events" size="small"></lightning-icon>
+                <p>No life events to display.</p>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <div class="error-state">
+                <lightning-icon icon-name="utility:error" alternative-text="Error" size="small"></lightning-icon>
+                <p>{error}</p>
+            </div>
+        </template>
+    </lightning-card>
+</template>
+

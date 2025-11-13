@@ -1,0 +1,42 @@
+<template>
+    <div class="timeline-container">
+        <template if:true={error}>
+            <div class="error-message">
+                Error loading life events: {error.body.message}
+            </div>
+        </template>
+        
+        <template if:false={error}>
+            <template if:true={lifeEvents.length}>
+                <div class="timeline">
+                    <template for:each={lifeEvents} for:item="event">
+                        <div key={event.id} class="timeline-item">                            
+                            <div class="timeline-content">
+                                <div class="timeline-icon">
+                                    <lightning-icon icon-name={event.iconName} size="small" variant='inverse'></lightning-icon>
+                                </div>                               
+                                <div class="timeline-details">                                                                     
+                                    <h3 class="timeline-event-type">{event.eventType}</h3>
+                                    <p class="timeline-date">{event.eventDate}</p>
+                                    <template if:true={event.eventDescription}>
+                                        <p class="timeline-description">{event.eventDescription}</p>
+                                    </template>
+                                    <template if:true={event.eventLocation}>
+                                        <lightning-icon class="location-icon" icon-name="utility:location" alternative-text="Location" size="x-small"></lightning-icon>
+                                        &nbsp; <span class="timeline-location">Location: {event.eventLocation}</span>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            
+            <template if:false={lifeEvents.length}>
+                <div class="no-events">
+                    No life events found for this contact.
+                </div>
+            </template>
+        </template>
+    </div>
+</template>
