@@ -1,0 +1,27 @@
+{
+    "records": [        
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Asset Lab Account",
+            "Type": "Other",
+            "Industry": "Other",            
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "ContactRef1"
+                        },
+                        "FirstName": "James",
+                        "LastName": "Bartlett",
+                        "Email": "jbartlett@testemail.com",
+                        "Title": "Other"                        
+                    }
+                ]
+            }
+        }
+    ]
+}

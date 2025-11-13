@@ -1,0 +1,71 @@
+{
+    "records": [        
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Asset Lab Account",
+            "Type": "Other",
+            "Industry": "Other",            
+            "Contacts": {
+                "records": [
+                    {
+                        "attributes": {
+                            "type": "Contact",
+                            "referenceId": "ContactRef1"
+                        },
+                        "FirstName": "James",
+                        "LastName": "Bartlett",
+                        "Email": "jbartlett@testemail.com",
+                        "Title": "Other", 
+                        "Life_Events__r": {
+                            "records": [
+                                {
+                                    "attributes": {
+                                        "type": "LifeEvents__c",
+                                        "referenceId": "LifeEventRef1"
+                                    },
+                                    "EventDate__c": "1948-02-04",
+                                    "EventLocation__c": "UAE",
+                                    "EventType__c": "Birth",                                    
+                                    "EventDescription__c": "James was born that day in the UAE."                                    
+                                },
+                                {
+                                    "attributes": {
+                                        "type": "LifeEvents__c",
+                                        "referenceId": "LifeEventRef2"
+                                    },
+                                    "EventDate__c": "1973-12-01",
+                                    "EventLocation__c": "London, UK",
+                                    "EventType__c": "Graduation",                                    
+                                    "EventDescription__c": "James earned his degree from Harvard University."                                    
+                                },
+                                {
+                                    "attributes": {
+                                        "type": "LifeEvents__c",
+                                        "referenceId": "LifeEventRef3"
+                                    },
+                                    "EventDate__c": "1974-04-06",
+                                    "EventLocation__c": "London, UK",
+                                    "EventType__c": "Job",                                                                        
+                                    "EventDescription__c": "James started a new job at Asset Lab."
+                                },
+                                {
+                                    "attributes": {
+                                        "type": "LifeEvents__c",
+                                        "referenceId": "LifeEventRef4"
+                                    },
+                                    "EventDate__c": "1999-07-28",
+                                    "EventLocation__c": "Istanbul, Turkey",
+                                    "EventType__c": "Marriage",                                                                        
+                                    "EventDescription__c": "James Married."
+                                }
+                            ]  
+                        }                     
+                    }
+                ]
+            }
+        }
+    ]
+}
