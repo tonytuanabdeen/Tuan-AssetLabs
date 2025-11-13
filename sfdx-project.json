@@ -1,12 +1,19 @@
 {
-  "packageDirectories": [
+  "packageDirectories": [    
     {
-      "path": "force-app",
-      "default": true
+      "versionName": "ver 0.1",
+      "versionNumber": "0.1.0.NEXT",
+      "path": "life-events",
+      "default": true,
+      "package": "Life Events",
+      "versionDescription": ""
     }
   ],
   "name": "Tuan-AssetLabs",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "65.0"
+  "sourceApiVersion": "65.0",
+  "packageAliases": {
+    "Life Events": "0HoJ6000000fxUCKAY"
+  }
 }
